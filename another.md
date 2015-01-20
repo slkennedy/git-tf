@@ -69,18 +69,18 @@ _Check in the changes from "commit one" and "commit two" as a single TFS changes
 ###Development Team with an Existing Repo  
 For a team working with an existing Git repo, a developer sharing changes to TFS using Git-TF would use the following workflow.
 
-1. git tf configure http://myserver:8080/tfs $/TeamProjectA/Main 
+>1. git tf configure http://myserver:8080/tfs $/TeamProjectA/Main  
 _Configure the existing repo's relationship with TFS_
 
-2. git tf pull 
+>2. git tf pull   
 _Fetch the latest changes from TFS and merge those changes with the local changes.  Note, merging is important when working in a team configuration. See "Rebase vs. Merge" below._
 
-3. git commit -a -m "merge commit"
+>3. git commit -a -m "merge commit"  
 
-4. git tf checkin
+>4. git tf checkin  
 _Check in the merge commit as a single TFS changeset_
 
-5. git push 
+>5. git push  
 _Push the merge commit to the origin_
 
 ##Commands  
