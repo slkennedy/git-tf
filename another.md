@@ -84,12 +84,11 @@ _Check in the merge commit as a single TFS changeset_
 _Push the merge commit to the origin_
 
 ##Commands  
-Below is the list of commands that are currently supported by Git-TF.  These commands can be run from a command window by typing
-    git tf \<command\>
+Below is the list of commands that are currently supported by Git-TF.  These commands can be run from a command window by typing `git tf \<command\>`
 
 ###Help
 
-|git tf help| git tf help \<command\>|  
+|`git tf help| git tf help \<command\>`|  
 |------------------------------------|----------------------------------------|
 |_Displays the list of available Git-TF commands._|_Displays the detailed syntax for a given command, including all optional flags._ |
 
@@ -136,12 +135,11 @@ is used by default when pulling, but the _--rebase_ option may be used to perfor
 ###Unshelve 
 |git tf unshelve shelvesetName [--user -u=shelvesetOwner]|
 |-------------|
-|Unshelve the changes from the TFS shelveset into a stash in the git repository. To apply the shelveset content in the repository
-execute _git stash apply_. When the stash is applied in the repository, the changes downloaded by the unshelve command will be merged with
+|Unshelve the changes from the TFS shelveset into a stash in the git repository. To apply the shelveset content in the repository execute _git stash apply_. When the stash is applied in the repository, the changes downloaded by the unshelve command will be merged with
 the current _HEAD_.|
 
 ###Shelvesets 
-|git tf shelvesets [shelvesetName] [--user \| -u=shelvesetOwner] [--details] [--delete]|
+|git tf shelvesets [shelvesetName] [--user -u=shelvesetOwner] [--details] [--delete]|
 |------------|
 |Lists the shelvesets available on the server that match the name and owner specified. If the _--details_ flag is specified, more shelveset details will be listed. This command can also be used to delete shelvesets from the server.|
 
