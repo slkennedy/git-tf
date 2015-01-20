@@ -97,9 +97,9 @@ Below is the list of commands that are currently supported by Git-TF.  These com
 ###Clone
 |git tf clone http://myserver:8080/tfs/collectionName $/TeamProjectA/Main [--deep] |
 |---------|
-|Initializes a new git repo from an existing path in a TFS server.  
-When cloning from TFS, by default a shallow clone is performed, i.e. only the latest changeset is downloaded and used to create the first Git commit. The optional _--deep_ flag may be used to clone each TFS changeset for the specified path into the new Git repo.  
-**Note**, when using the _--deep_ option, all future git tf fetch, git tf pull, and git tf checkin operations will default to _--deep_.|
+|Initializes a new git repo from an existing path in a TFS server. When cloning from TFS, by default a shallow clone is performed, i.e. only the latest changeset is downloaded and used to create the first Git commit. The optional _--deep_ flag may be used to clone each TFS changeset for the specified path into the new Git repo.|
+|---------|
+|**Note**, when using the _--deep_ option, all future git tf fetch, git tf pull, and git tf checkin operations will default to _--deep_.|
 
 
 ###Configure 
@@ -111,9 +111,7 @@ When cloning from TFS, by default a shallow clone is performed, i.e. only the la
 ###Checkin 
 |git tf checkin [--deep]|
 |-----------------------|
-|Checks in the changes made in the Git repo into TFS.  
-By default, the checkin command will create a single TFS changeset for the aggregate of all changes made on the current branch in Git since the last checkin to TFS.  When used with the _--deep_ option, a TFS 
-changeset will be created for each Git commit on the current branch since the last checkin to TFS.|
+|Checks in the changes made in the Git repo into TFS. By default, the checkin command will create a single TFS changeset for the aggregate of all changes made on the current branch in Git since the last checkin to TFS.  When used with the _--deep_ option, a TFS changeset will be created for each Git commit on the current branch since the last checkin to TFS.|
 
 
 ###Fetch 
@@ -137,14 +135,14 @@ is used by default when pulling, but the _--rebase_ option may be used to perfor
 
 
 ###Unshelve 
-|git tf unshelve shelvesetName [--user|-u=shelvesetOwner]|
+|git tf unshelve shelvesetName [--user\|-u=shelvesetOwner]|
 |-------------|
 |Unshelve the changes from the TFS shelveset into a stash in the git repository. To apply the shelveset content in the repository
 execute _git stash apply_. When the stash is applied in the repository, the changes downloaded by the unshelve command will be merged with
 the current _HEAD_.|
 
 ###Shelvesets 
-|git tf shelvesets [shelvesetName] [--user|-u=shelvesetOwner] [--details] [--delete]|
+|git tf shelvesets [shelvesetName] [--user\|-u=shelvesetOwner] [--details] [--delete]|
 |------------|
 |Lists the shelvesets available on the server that match the name and owner specified. If the _--details_ flag is specified, more shelveset details will be listed. This command can also be used to delete shelvesets from the server.
 
