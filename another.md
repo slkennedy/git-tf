@@ -88,8 +88,10 @@ Below is the list of commands that are currently supported by Git-TF.  These com
     git tf \<command\>
 
 ###Help
->    git tf help  
-_Displays the list of available Git-TF commands._
+
+|    git tf help                                  |
+|-------------------------------------------------|
+|_Displays the list of available Git-TF commands._|
 
 
 >    git tf help \<command\>  
