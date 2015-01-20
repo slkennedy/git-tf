@@ -91,23 +91,19 @@ Below is the list of commands that are currently supported by Git-TF.  These com
 
 |git tf help| git tf help \<command\>|  
 |------------------------------------|----------------------------------------|
-|_Displays the list of available Git-TF commands._|
-git tf help \<command\> | _Displays the detailed syntax for a given command, including all optional flags._ |
+|_Displays the list of available Git-TF commands._|_Displays the detailed syntax for a given command, including all optional flags._ |
 
 
 ###Clone
-<div class="code">git tf clone http://myserver:8080/tfs/collectionName $/TeamProjectA/Main [--deep] </div>
-Initializes a new git repo from an existing path in a TFS server.  When cloning from TFS, by default a shallow clone is performed, 
-i.e. only the latest changeset is downloaded and used to create the first Git commit.  The optional <span class="code">--deep</span> flag may be used to clone 
-each TFS changeset for the specified path into the new Git repo.  Note, when using the <span class="code">--deep</span> option, all future <span class="code">git tf fetch</span>, 
-<span class="code">git tf pull</span>, and <span class="code">git tf checkin</span> operations will default to <span class="code">--deep</span>.
+|git tf clone http://myserver:8080/tfs/collectionName $/TeamProjectA/Main [--deep] |
+|---------|
+|Initializes a new git repo from an existing path in a TFS server. When cloning from TFS, by default a shallow clone is performed, i.e. only the latest changeset is downloaded and used to create the first Git commit. The optional _--deep_ flag may be used to clone each TFS changeset for the specified path into the new Git repo.  **Note**, when using the _--deep_ option, all future git tf fetch, git tf pull, and git tf checkin operations will default to --deep.|
 
 
 ###Configure 
-<div class="code">git tf configure http://myserver:8080/tfs/collectionName $/TeamProjectA/Main [--deep] </div>
-
-Configures an existing git repo to be able to communicate with a TFS server.  Like the clone command, the <span class="code">--deep</span> option may be used 
-to set the default for future fetch and checkin operations.
+|git tf configure http://myserver:8080/tfs/collectionName $/TeamProjectA/Main [--deep] |
+|----------------|
+|Configures an existing git repo to be able to communicate with a TFS server.  Like the clone command, the **--deep** option may be used to set the default for future fetch and checkin operations. |
 
 
 ###Checkin 
