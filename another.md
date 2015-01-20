@@ -133,8 +133,7 @@ Below is the list of commands that are currently supported by Git-TF.  These com
 ###Unshelve 
 |git tf unshelve shelvesetName [--user -u=shelvesetOwner]|
 |-------------|
-|Unshelve the changes from the TFS shelveset into a stash in the git repository. To apply the shelveset content in the repository execute `git stash apply`. When the stash is applied in the repository, the changes downloaded by the unshelve command will be merged with
-the current `HEAD`.|
+|Unshelve the changes from the TFS shelveset into a stash in the git repository. To apply the shelveset content in the repository execute `git stash apply`. When the stash is applied in the repository, the changes downloaded by the unshelve command will be merged with the current `HEAD`.|
 
 ###Shelvesets 
 |git tf shelvesets [shelvesetName] [--user -u=shelvesetOwner] [--details] [--delete]|
