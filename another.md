@@ -109,39 +109,37 @@ Below is the list of commands that are currently supported by Git-TF.  These com
 ###Checkin 
 |git tf checkin [--deep]|
 |-----------------------|
-|Checks in the changes made in the Git repo into TFS. By default, the checkin command will create a single TFS changeset for the aggregate of all changes made on the current branch in Git since the last checkin to TFS.  When used with the _--deep_ option, a TFS changeset will be created for each Git commit on the current branch since the last checkin to TFS.|
+|Checks in the changes made in the Git repo into TFS. By default, the checkin command will create a single TFS changeset for the aggregate of all changes made on the current branch in Git since the last checkin to TFS.  When used with the `--deep` option, a TFS changeset will be created for each Git commit on the current branch since the last checkin to TFS.|
 
 
 ###Fetch 
 |git tf fetch [--deep]|
 |---------------------|
-|Fetches changes made in TFS as a new commit in Git, and references the new commit as _FETCH_HEAD_.  
-By default, a single commit will be created in the Git repo with the aggregate changes since the last fetch.  When used with the _--deep_ option, a Git commit will be created for each TFS changeset that was created since the last fetch. | 
+|Fetches changes made in TFS as a new commit in Git, and references the new commit as `FETCH_HEAD`. By default, a single commit will be created in the Git repo with the aggregate changes since the last fetch.  When used with the `--deep` option, a Git commit will be created for each TFS changeset that was created since the last fetch. | 
 
 
 ###Pull 
 |git tf pull [--deep] [--rebase]|
 |-------------------------------|
-|Fetches changes made in TFS as a new commit in Git, and merges the commit with the latest commit in the current branch.  By default, the fetch performed by the pull command is shallow, but the _--deep_ option may be used to create a Git commit for each TFS changeset created since the last fetch.  Also, merge 
-is used by default when pulling, but the _--rebase_ option may be used to perform a rebase instead.|
+|Fetches changes made in TFS as a new commit in Git, and merges the commit with the latest commit in the current branch.  By default, the fetch performed by the pull command is shallow, but the `--deep` option may be used to create a Git commit for each TFS changeset created since the last fetch.  Also, merge is used by default when pulling, but the `--rebase` option may be used to perform a rebase instead.|
 
 
 ###Shelve 
 |git tf shelve myshelveset|
 |--------------------------|
-|Shelve the changes made in the Git repo into TFS.  Shelve operates similarly to the _git tf checkin --shallow_ option in that all aggregate changes since the last checkin will be created as a single shelveset.|  
+|Shelve the changes made in the Git repo into TFS.  Shelve operates similarly to the `git tf checkin --shallow` option in that all aggregate changes since the last checkin will be created as a single shelveset.|  
 
 
 ###Unshelve 
 |git tf unshelve shelvesetName [--user -u=shelvesetOwner]|
 |-------------|
-|Unshelve the changes from the TFS shelveset into a stash in the git repository. To apply the shelveset content in the repository execute _git stash apply_. When the stash is applied in the repository, the changes downloaded by the unshelve command will be merged with
-the current _HEAD_.|
+|Unshelve the changes from the TFS shelveset into a stash in the git repository. To apply the shelveset content in the repository execute `git stash apply`. When the stash is applied in the repository, the changes downloaded by the unshelve command will be merged with
+the current `HEAD`.|
 
 ###Shelvesets 
 |git tf shelvesets [shelvesetName] [--user -u=shelvesetOwner] [--details] [--delete]|
 |------------|
-|Lists the shelvesets available on the server that match the name and owner specified. If the _--details_ flag is specified, more shelveset details will be listed. This command can also be used to delete shelvesets from the server.|
+|Lists the shelvesets available on the server that match the name and owner specified. If the `--details` flag is specified, more shelveset details will be listed. This command can also be used to delete shelvesets from the server.|
 
 ##Working with Teams 
 
