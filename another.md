@@ -84,17 +84,16 @@ _Check in the merge commit as a single TFS changeset_
 _Push the merge commit to the origin_
 
 ##Commands  
-Below is the list of commands that are currently supported by Git-TF.  These commands can be run from a command window by typing 
+Below is the list of commands that are currently supported by Git-TF.  These commands can be run from a command window by typing
     git tf \<command\>
 
 ###Help
->git tf help 
-Displays the list of available Git-TF commands.
+    git tf help  
+_Displays the list of available Git-TF commands._
 
 
->git tf help \<command\>
-
-Displays the detailed syntax for a given command, including all optional flags.
+    git tf help \<command\>  
+_Displays the detailed syntax for a given command, including all optional flags._
 
 
 ###Clone
