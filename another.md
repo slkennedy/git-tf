@@ -85,14 +85,14 @@ _Push the merge commit to the origin_
 
 ##Commands  
 Below is the list of commands that are currently supported by Git-TF.  These commands can be run from a command window by typing 
-    git tf <command>
+    git tf \<command\>
 
 ###Help
 >git tf help 
 Displays the list of available Git-TF commands.
 
 
->git tf help <command>
+>git tf help \<command\>
 
 Displays the detailed syntax for a given command, including all optional flags.
 
